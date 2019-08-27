@@ -1,0 +1,14 @@
+<h1>Hooray Computers!</h1>
+
+<% elements.forEach(e => { %>
+    <div class="products">
+        <img src="<%= e.image %>" alt="item-image">
+        <h1><%= e.name %></h1>
+        <h2><%= e.class %></h2>
+        <p><%= e.shortDescription %></p>
+    </div>
+    <div class="item-interact">
+        <input type="submit" value="like">
+    </div>
+    <hr>
+<% }) %>
