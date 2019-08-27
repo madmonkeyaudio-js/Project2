@@ -36,6 +36,7 @@ app.use('/auth', require('./controllers/auth.js'))
 app.use('/profile', require('./controllers/profile'))
 app.use('/items', require('./controllers/items'))
 app.use('/computers', require('./controllers/computers'))
+
 //ROUTES
 app.get('/', (req, res) => {
     res.render('home.ejs')

@@ -2,13 +2,26 @@
 
 <% elements.forEach(e => { %>
     <div class="products">
-        <img src="<%= e.image %>" alt="item-image">
-        <h1><%= e.name %></h1>
-        <h2><%= e.class %></h2>
-        <p><%= e.shortDescription %></p>
+        <div class="prod-left">
+            <h2 class="product-class"><%= e.class %></h2>
+            <img src="<%= e.image %>" alt="item-image">
+        </div>
+        <div class="prod-right">
+            <h1 class="product-name"><%= e.name %></h1>
+            <h2><%= e.salePrice %></h2>
+            <p class="product-description"><%= e.shortDescription %></p>
+        </div>    
     </div>
     <div class="item-interact">
-        <input type="submit" value="like">
+       
+        <form action="/computers" method="POST">
+            <input type="hidden" name="sku" value="<%= e.sku %>">
+            <input type="hidden" name="name" value="<%= e.name %>">
+            <input type="hidden" name="price" value="<%= e.salePrice %>">
+            <input type="submit" value="LIKE">
+           
+        </form>
+       
     </div>
     <hr>
 <% }) %>

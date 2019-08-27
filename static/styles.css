@@ -2,7 +2,6 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
 nav {
    background-image: linear-gradient(rgb(0, 195, 255), rgb(0, 255, 221));
    display: flex;
@@ -37,7 +36,6 @@ main {
     background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/70/94/1157b6fd85f1ff2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 .login-form {
     margin: 0 auto;
@@ -45,7 +43,6 @@ main {
     width: 30%;
     border: 1px dotted grey;
     background-color: rgb(46, 169, 213);
-   
 }
 .login-form form{
     display: flex;
@@ -71,6 +68,18 @@ background-color: rgb(143, 198, 143);
     float: right;
     cursor: pointer;
 }
+.products {
+    display: flex;
+    justify-content: space-between;
+}
+.prod-left {
+    padding: 20px;
+    margin: 20px;
+}
+.prod-right {
+    padding: 20px;
+    margin: 20px;
+}
 footer {
     background-color: rgb(0, 195, 255);
     position: fixed;
@@ -78,3 +87,4 @@ footer {
     padding: 10px;
     width: 100%;
 }
+
