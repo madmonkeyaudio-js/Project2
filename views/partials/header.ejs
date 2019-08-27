@@ -1,15 +1,28 @@
 <nav>
-    
     <ul>
+        <% if (user && user.firstname) { %>
+            <li>
+                <a href="/profile">Welcome Back, <%= user.firstname %>!</a>
+            </li>
+        <% } %>
         <li><a href="/">Home</a></li>
-        <li><a href="#">Link1</a></li>
-        <li><a href="#">Link2</a></li>
     </ul>
    
     <ul>
+        <% if(user) { %>
+            <li><a href="/profile">Profile Page</a></li>
+            <li><a href="/items">Items List</a></li>
+            <% if(user.admin) { %>
+                <li><a href="/profile/admin">Admin Profile</a></li>
+           <% } %>
+            <li><a href="/auth/logout">Logout</a></li>
+       <% } else { %>
         <li><a href="/auth/signup">Signup</a></li>
         <li><a href="/auth/login">Login</a></li>
-        <li><a href="/auth/logout">Logout</a></li>
+      <% } %>
+      
+      
+       
     </ul>
 
 </nav>

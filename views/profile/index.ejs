@@ -1,0 +1,15 @@
+<h2>PROFILE - page</h2>
+<div>
+    <div>
+        <img src="<%= user.profile %>" alt="user profile pic">
+    </div>
+    <div>
+        <strong>Name:</strong><%= user.firstname %> <%= user.lastname %> 
+        <p>
+            <strong>Admin:</strong><%= user.admin ? 'Yes' : 'No' %>
+        </p>
+    </div>
+    <div>
+        <%= user.bio %>
+    </div>
+</div>

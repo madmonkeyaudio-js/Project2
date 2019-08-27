@@ -7,6 +7,19 @@
     <title>LOGIN</title>
 </head>
 <body>
+    <div id="login-background">
     <h1>LOGIN</h1>
+    <div class="login-form">
+    <form method="POST" action="/auth/login">
+        <label for="email-field">Login:</label>
+        <input id="email-field" type="text" name="email">
+
+        <label for="password-field">Password:</label>
+        <input id="password-field" type="text" name="password">
+
+        <input id="submit-login" type="submit">
+    </form>
+</div>
+</div>
 </body>
 </html>
