@@ -17,36 +17,34 @@ router.get('/', (req,res) => {
       res.render('lists/computers.ejs', {
         elements: elements
       })
-      })
-    
-})
+    })
+  })
 
 router.post('/', (req,res) => {
-  console.log('SKU', req.body.price)
+  //console.log('SKU', req.body.price)
+  //console.log(req.user.dataValues.id);
     if(req.user){
-      db.user.findOne(req.user.id)
+      db.user.findByPk(req.user.dataValues.id)
       .then(user => {
+        console.log(user.dataValues.firstname)
+        console.log(req.body.sku, req.body.name, req.body.price)
         db.item.findOrCreate({
-                id: req.body.sku,
-                name: req.body.name,
-                price: req.body.price
-              })
-            })
-      .spread((item, created) => {
-        user.addItem(item).then(() => {
-          //res.something something
+         
+          where: {
+            productId: req.body.sku,
+            name: req.body.name,
+            price: req.body.price
+          }
+        }).spread((item, created) => {
+          console.log(item);
+          user.addItem(item).then(() => {
+            res.render('profile/favorites.ejs');
+          })
+        }).catch(err => {
+          console.log(err);
         })
       })
     }
   })
-  //res.render('myFaves.ejs');
-//})
-
-// router.get('/:id', (req,res) => {
   
-//       res.render('singleItems/singleComp.ejs', {
-//         elements: req.params.id
-      
-//       })
-// })
 module.exports = router;
