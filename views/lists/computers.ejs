@@ -13,15 +13,19 @@
         </div>    
     </div>
     <div class="item-interact">
-       
         <form action="/computers" method="POST">
             <input type="hidden" name="sku" value="<%= e.sku %>">
             <input type="hidden" name="name" value="<%= e.name %>">
             <input type="hidden" name="price" value="<%= e.salePrice %>">
             <input type="submit" value="LIKE">
-           
-        </form>
-       
+        </form> 
+
+        <form action="/wishList" method="POST">
+            <input type="hidden" name="sku" value="<%= e.sku %>">
+            <input type="hidden" name="name" value="<%= e.name %>">
+            <input type="hidden" name="price" value="<%= e.salePrice %>">
+            <input type="submit" value="LIKE">
+        </form> 
     </div>
     <hr>
 <% }) %>
