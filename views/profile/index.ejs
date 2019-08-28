@@ -1,6 +1,13 @@
 <h2>PROFILE - page</h2>
 <div>
+    
     <div>
+        <form action="" method="POST">
+            <label for="update-profilePic">Update your Profile Picture URL</label>
+            <input id="update-profilePic" type="text">
+            <input type="submit">
+        </form>
+
         <img src="<%= user.profile %>" alt="user profile pic">
     </div>
     <div>
@@ -11,5 +18,8 @@
     </div>
     <div>
         <%= user.bio %>
+    </div>
+    <div>
+        
     </div>
 </div>
