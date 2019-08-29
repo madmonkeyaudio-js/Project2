@@ -85,6 +85,7 @@ background-color: rgb(143, 198, 143);
 }
 .bestBuyList {
     display: flex;
+    justify-content: center;
 }
 footer {
     background-color: rgb(0, 195, 255);
