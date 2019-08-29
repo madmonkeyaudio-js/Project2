@@ -1,4 +1,3 @@
-
 //THIS DOTENV declares your port, so if you need to change it you can in .env file
 require('dotenv').config(); //YOU DO NOT NEED TO DECLARE THIS IN A VARIABLE
 
@@ -38,6 +37,8 @@ app.use('/items', require('./controllers/items'))
 app.use('/computers', require('./controllers/computers'))
 app.use('/myItems', require('./controllers/myItems'))
 app.use('/wishList', require('./controllers/wishList'))
+app.use('/laptops', require('./controllers/laptops'))
+app.use('/headphones', require('./controllers/headphones'))
 
 //ROUTES
 app.get('/', (req, res) => {

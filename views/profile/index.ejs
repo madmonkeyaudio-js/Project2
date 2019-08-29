@@ -1,13 +1,6 @@
 <h2>PROFILE - page</h2>
 <div>
-    
     <div>
-        <form action="" method="POST">
-            <label for="update-profilePic">Update your Profile Picture URL</label>
-            <input id="update-profilePic" type="text">
-            <input type="submit">
-        </form>
-
         <img src="<%= user.profile %>" alt="user profile pic">
     </div>
     <div>
@@ -19,7 +12,19 @@
     <div>
         <%= user.bio %>
     </div>
-    <div>
-        
-    </div>
+    <form action="/profile/<%= user.dataValues.firstname %>/?_method=DELETE" method="POST">
+        <input type="hidden" value="<%= user.dataValues.id %>" name="id">
+        <input type="submit" value="Delete">
+    </form>
+
+    <form action="/profile/<%= user.dataValues.id %>/?_method=PUT" method="POST">
+        <h1>Update profile info!</h1>
+        <label for="update-username">Username</label>
+            <input id="update-username" type="text" name="username">
+        <label for="update-email">Email</label>
+            <input id="update-email" type="text"name="email">
+        <label for="update-profile">Profile</label>
+            <input id="update-profile" type="text" name="profile">
+        <input type="submit" value="Update">
+    </form>
 </div>
