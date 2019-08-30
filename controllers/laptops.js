@@ -1,7 +1,5 @@
 const express = require('express')
 const router = express.Router();
-const db = require('../models')
-const passport = require('../config/passportConfig')
 const axios = require('axios');
 
 router.get('/', (req,res) => {
@@ -11,7 +9,7 @@ router.get('/', (req,res) => {
     axios.get(bestBuyUrl)
     .then(function(apiResponse) {
       var elements = apiResponse.data.products;
-      res.render('lists/laptops', {
+      res.render('partials/productRender', {
         elements: elements
       })
     })

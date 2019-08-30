@@ -1,30 +1,36 @@
-<h2>PROFILE - page</h2>
-<div>
-    <div>
-        <img src="<%= user.profile %>" alt="user profile pic">
-    </div>
-    <div>
-        <strong>Name:</strong><%= user.firstname %> <%= user.lastname %> 
-        <p>
-            <strong>Admin:</strong><%= user.admin ? 'Yes' : 'No' %>
-        </p>
-    </div>
-    <div>
-        <%= user.bio %>
-    </div>
-    <form action="/profile/<%= user.dataValues.firstname %>/?_method=DELETE" method="POST">
-        <input type="hidden" value="<%= user.dataValues.id %>" name="id">
-        <input type="submit" value="Delete">
-    </form>
 
-    <form action="/profile/<%= user.dataValues.id %>/?_method=PUT" method="POST">
-        <h1>Update profile info!</h1>
-        <label for="update-username">Username</label>
-            <input id="update-username" type="text" name="username">
-        <label for="update-email">Email</label>
-            <input id="update-email" type="text"name="email">
-        <label for="update-profile">Profile</label>
-            <input id="update-profile" type="text" name="profile">
-        <input type="submit" value="Update">
+<div class="profile-page">
+  <div class="profile-left">
+    <div>
+      <img class="z-depth-2" src="<%= user.profile %>" alt="user profile pic" />
+    </div>
+    <div>
+        <strong>Name:</strong><%= user.firstname %> <%= user.lastname %>
+    <p>
+        <strong>Admin:</strong><%= user.admin ? 'Yes' : 'No' %>
+    </p>
+    </div>
+        <%= user.bio %>
+    <form action="/profile/<%= user.dataValues.firstname %>/?_method=DELETE"method="POST">
+        <input type="hidden" value="<%= user.dataValues.id %>" name="id" />
+        <input type="submit" value="Delete Account" />
     </form>
+  </div>
+
+  <div class="profile-right">
+    <div>
+        <form action="/profile/<%= user.dataValues.id %>/?_method=PUT" method="POST">
+            <h1>Update profile info!</h1>
+            <label for="update-username">Username</label>
+                <input id="update-username" type="text" name="username" />
+            <label for="update-email">Email</label>
+                <input id="update-email" type="text" name="email" />
+            <label for="update-profile">Profile</label>
+                <input id="update-profile" type="text" name="profile" />
+                <input type="submit" value="Update" />
+        </form>
+    </div>
+  </div>
+
+  
 </div>
