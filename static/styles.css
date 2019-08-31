@@ -2,6 +2,12 @@ html, body {
     margin: 0;
     padding: 0;
 }
+.home-back {
+    background-image: url('https://i.imgur.com/SvnuN4M.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
 h1 {
     font-size: 24px;
 }
@@ -36,6 +42,15 @@ main {
     margin: 10px;
     text-align: center;
 }
+.fourOFour {
+    height: 80%;
+    width: 80%;
+    background-image: url('https://i.ytimg.com/vi/A18INQ_lksM/maxresdefault.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
 #login-background {
     height: 100vh;
     width: 100%;
@@ -45,20 +60,21 @@ main {
 }
 .login-form {
     margin: 0 auto;
-   text-align: center;
-    width: 30%;
-    border: 1px dotted grey;
-    background-color: rgb(46, 169, 213);
+    text-align: center;
+    width: 40%;
+    border: 1px solid rgb(98, 136, 136);
+    background-color: rgba(46, 168, 213, 0.214);
 }
 .login-form form{
     display: flex;
     flex-direction: column;
 }
 .login-form label{
-    padding: 10px 0px;
+    padding: 5px 0px;
+    font-size: 14px;
 }
 .login-form input{
-    padding: 5px 0px;
+    padding: 0px 0px;
     background-color: rgb(233, 225, 225);
 }
 .login-form #submit-login{
@@ -80,6 +96,9 @@ background-color: rgb(143, 198, 143);
 }
 .bestBuyList {
     text-align: center;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/69/01/7957b416b366534.jpg');
+    background-size: cover;
+    height: 100%;
 }
 .products {
     display: flex;
