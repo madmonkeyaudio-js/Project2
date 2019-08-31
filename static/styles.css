@@ -7,6 +7,7 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    text-align: center;
 }
 h1 {
     font-size: 24px;
@@ -93,8 +94,10 @@ img {
     cursor: pointer;
 }
 .profile-page {
-    display: flex;
-    justify-content: space-evenly;
+    background-image: url('https://i.pinimg.com/736x/10/1e/f6/101ef6a9e146b23de28fa2cd568ad17b.jpg');
+    background-size: cover;
+    height: 100%;
+    padding: 40px;
 }
 .bestBuyList {
     padding: 40px 0px;
@@ -106,7 +109,7 @@ img {
 .products {
     display: flex;
     justify-content: space-between;  
-    background-image: url('https://million-wallpapers.com/wallpapers/3/2/442083719127072.jpg');
+    background-image: url('http://www.uidownload.com/files/648/52/17/bright-blurred-light-thumb.jpg');
     background-size: cover;
 }
 .prod-left {

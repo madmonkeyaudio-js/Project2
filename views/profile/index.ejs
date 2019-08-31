@@ -1,6 +1,6 @@
 
-<div class="profile-page">
-  <div class="profile-left">
+<div class="profile-page row">
+  <div class="profile-left col s6">
     <div>
       <img class="z-depth-2" src="<%= user.profile %>" alt="user profile pic" />
     </div>
@@ -17,7 +17,7 @@
     </form>
   </div>
 
-  <div class="profile-right">
+  <div class="profile-right col s6">
     <div>
         <form action="/profile/<%= user.dataValues.id %>/?_method=PUT" method="POST">
             <h1>Update profile info!</h1>
