@@ -38,6 +38,9 @@ nav a:hover {
 main {
     height: 80vh;
 }
+img {
+    max-height: 40vh;
+}
 .error {
     margin: 5px;
     text-align: center;
@@ -45,7 +48,7 @@ main {
 .fourOFour {
     height: 80%;
     width: 80%;
-    background-image: url('https://i.ytimg.com/vi/A18INQ_lksM/maxresdefault.jpg');
+    background-image: url('http://images2.fanpop.com/images/photos/2700000/funny-lotr-oic-lord-of-the-rings-2751376-500-405.jpg');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -101,7 +104,9 @@ main {
 }
 .products {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  
+    background-image: url('https://million-wallpapers.com/wallpapers/3/2/442083719127072.jpg');
+    background-size: cover;
 }
 .prod-left {
     padding: 20px;

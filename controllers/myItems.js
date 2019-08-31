@@ -23,7 +23,8 @@ router.post('/', (req,res) => {
           where: {
             productId: req.body.sku,
             name: req.body.name,
-            price: req.body.price
+            price: req.body.price,
+            shortDescription: req.body.comment
           }
         }).spread((item, created) => {
           //console.log(item);
