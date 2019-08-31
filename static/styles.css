@@ -39,7 +39,7 @@ main {
     height: 80vh;
 }
 .error {
-    margin: 10px;
+    margin: 5px;
     text-align: center;
 }
 .fourOFour {
@@ -48,8 +48,6 @@ main {
     background-image: url('https://i.ytimg.com/vi/A18INQ_lksM/maxresdefault.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-
-
 }
 #login-background {
     height: 100vh;
@@ -81,10 +79,10 @@ main {
     background-color: rgb(209, 208, 208);
 }
 .error-box {
-background-color: rgb(205, 138, 138);
+    background-color: rgb(205, 138, 138);
 }
 .success-box {
-background-color: rgb(143, 198, 143);
+    background-color: rgb(143, 198, 143);
 }
 .close-button {
     float: right;
@@ -95,6 +93,7 @@ background-color: rgb(143, 198, 143);
     justify-content: space-evenly;
 }
 .bestBuyList {
+    padding: 40px 0px;
     text-align: center;
     background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/69/01/7957b416b366534.jpg');
     background-size: cover;
@@ -112,7 +111,6 @@ background-color: rgb(143, 198, 143);
     padding: 20px;
     margin: 20px;
 }
-
 footer {
     background-color: rgb(0, 195, 255);
     position: fixed;
