@@ -40,6 +40,7 @@ main {
 }
 img {
     max-height: 40vh;
+    max-width: 30vw;
 }
 .error {
     margin: 5px;
