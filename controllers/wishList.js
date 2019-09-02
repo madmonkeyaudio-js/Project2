@@ -24,12 +24,18 @@ router.post('/', (req, res) => {
         })
     }
 })
+
 router.get('/', (req, res) => {
-    db.wishitem.findAll()
-    .then((items) => {
-        console.log(items);
-        res.render('profile/wishList', {
-            items: items
+    //console.log(req.user.dataValues.id)
+    db.user.findOne({
+        where: {
+            id: req.user.dataValues.id
+        }
+    }).then(user => {
+        user.getWishitems().then(items => {
+            res.render('profile/wishList', {
+                items: items
+            })
         })
     })
 })

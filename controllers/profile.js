@@ -29,7 +29,6 @@ router.delete('/:name', (req, res) => {
     })
 })
 router.put('/:id', (req, res) => {
-    console.log('put it down boyyyy')
     db.user.findOne({
         where: {
             id: req.params.id

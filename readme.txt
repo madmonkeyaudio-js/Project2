@@ -13,7 +13,7 @@ User may view their favorite products, or their wishlist on separate pages.
 RESTful routes: 
 
 /GET
-/Profile displays current user profile. 
+/Profile displays current user profile, populated by user database. 
 /items has three links to three separate product pages. 
 /myitems displays current user's favorited items.
 /wishList display current user's wish list items.

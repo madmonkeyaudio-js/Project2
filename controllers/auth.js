@@ -36,9 +36,9 @@ router.post('/signup', (req, res, next) => {
         })
         .catch(err => {
             //Print the error to the console
-            console.log('ERROR in POST /auth/signup', err);
+            //console.log('ERROR in POST /auth/signup', err);
             //Generate generic error flash message
-            req.flash('error', 'Oh poop!')
+            req.flash('error', 'Uh oh!')
             //Get a validation specific error if the user needs to know something
             if (err && err.errors){
                 err.errors.forEach(err => {
