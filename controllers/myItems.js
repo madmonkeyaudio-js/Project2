@@ -4,6 +4,7 @@ const db = require('../models')
 
 
 router.get('/', (req, res) => {
+  if(req.user){
   db.user.findOne({
     where: {
       id: req.user.dataValues.id
@@ -18,7 +19,9 @@ router.get('/', (req, res) => {
             console.log(err);
           })
         })
-      })
+      }
+    })
+    
 
 
 router.post('/', (req,res) => {

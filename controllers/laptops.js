@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const axios = require('axios');
+const db = require('../models');
 
 router.get('/', (req,res) => {
     // Use request to call the API

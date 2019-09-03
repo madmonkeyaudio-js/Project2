@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         res.render('partials/productRender', {
             elements: elements
         })
-   })
+    })
 })
 
 module.exports = router;

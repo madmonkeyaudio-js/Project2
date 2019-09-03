@@ -2,6 +2,7 @@
 const express = require('express')
 const router = express.Router();
 const axios = require('axios');
+const db = require('../models');
 
 router.get('/', (req,res) => {
 
@@ -15,5 +16,25 @@ router.get('/', (req,res) => {
       })
     })
   })
+
+  router.post('/view', (req, res) => {
+ 
+      db.item.findOne({
+        where: {
+          productId: req.body.sku
+        }
+      }).then((item) => {
+        if(item !== null) {
+          item.getUsers().then((users) => {
+            res.render('singleItem', {
+              users: users
+            })
+          })
+        }else {
+          res.send('nobody has like this yet!')
+        } 
+      })
+    })
+    
 
 module.exports = router;

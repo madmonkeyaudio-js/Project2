@@ -1,7 +1,15 @@
 <h1>These are My Items!</h1>
 
     <% items.forEach(i => { %>
-        <h2><%= i.name %></h2>
-        <p><%= i.price %></p>
+        <div class="my-p">
+            <div class="my-p-left">
+                <h2><%= i.name %></h2>
+                <p><%= i.price %></p>
+            </div>
+            <div class ="my-p-right">
+                <p><%= i.shortDescription %></p>
+            </div>
+        </div>
+       
         <hr>
     <% }) %>
