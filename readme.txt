@@ -11,7 +11,6 @@ User may comment on any of these displayed products, and save them either to a l
 User may view their products, or their wishlist on separate pages. 
 User may view what other users have, but not their wishlist. 
 
-
 RESTful routes: 
 
 /GET
@@ -24,9 +23,17 @@ RESTful routes:
 
 /POST
 Form on product display page allows user to save a product to their wish list or to their items list.
+/wishList --> find current user --> find or create wished item for that user --> render page with that item and any others listed. 
+/myItems --> find current user --> find or create item for that user --> render page with that item and any others listed. 
+
+Form on computers/view
+currently the post route is handled by the computers controller though that will likely change for clarity. 
+/computers/view --> find item in database --> if it exists in database render a page with the users who have that item in their 
+items list --> else render page that says 'Be the first to add this item.'
+
 
 /PUT
-An update form calls on the current user's row to update information. 
+An update form calls on the current user's row and updates its information with text in the form inputs. 
 
 /DELETE
 A delete button calls on the current user's row and deletes it. 
