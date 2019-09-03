@@ -31,7 +31,7 @@ router.get('/', (req,res) => {
             })
           })
         }else {
-          res.send('nobody has liked this yet!')
+          res.render('beTheFirst')
         } 
       })
     })
