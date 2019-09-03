@@ -3,11 +3,12 @@ html, body {
     padding: 0;
 }
 .home-back {
-    background-image: url('https://i.imgur.com/SvnuN4M.png');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFKcvzfhSyojMlzZ3qMnucjYKzG3rve2tc_XBM1Orx8qQbtL7R0Q');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     text-align: center;
+    color: white;
 }
 h1 {
     font-size: 24px;

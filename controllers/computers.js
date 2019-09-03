@@ -31,10 +31,8 @@ router.get('/', (req,res) => {
             })
           })
         }else {
-          res.send('nobody has like this yet!')
+          res.send('nobody has liked this yet!')
         } 
       })
     })
-    
-
 module.exports = router;

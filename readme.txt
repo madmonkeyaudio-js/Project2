@@ -5,10 +5,11 @@ User stories:
 
 User signs up via sign-up form.
 User logs in via login form and is directed to a profile page. 
-User may update username, email, and profile-picture, which will prompt them to login again. 
+User may update username, email, and profile-picture, which will prompt them to login again with updated info. 
 User may view popular Best Buy desktops, laptops, and tvs (LIMIT 10 products per page). 
-User may comment on any of these displayed products, and save them either to favorites, or a wishList. 
-User may view their favorite products, or their wishlist on separate pages. 
+User may comment on any of these displayed products, and save them either to a list of products they own, or a wishList. 
+User may view their products, or their wishlist on separate pages. 
+User may view what other users have, but not their wishlist. 
 
 
 RESTful routes: 
@@ -22,13 +23,13 @@ RESTful routes:
 
 
 /POST
-
+Form on product display page allows user to save a product to their wish list or to their items list.
 
 /PUT
-
+An update form calls on the current user's row to update information. 
 
 /DELETE
-
+A delete button calls on the current user's row and deletes it. 
 
 Known bugs/issues:
 
@@ -39,9 +40,7 @@ by changing the comment input.
 
 Future features:
 
---> Users should be able to see either a number or percentage of other users who use a particular product. 
-The easiest way to implement it would probably be by creating a new view page, finding all users for each owned item, 
-and calculating the number to a variable, which would then be displayed. 
+--> Users should be able to see either a number or percentage of other users who use a particular product, not just their names. 
 
 --> When there are no favorited or wished items the rendered pages should read something like, 
 'Looks like you haven't added anything yet!'

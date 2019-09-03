@@ -1,7 +1,13 @@
 <% elements.forEach(e => { %>
 <div class="products">
   <div class="prod-left">
+    <div class="card-panel hoverable">
     <img src="<%= e.image %>" alt="item-image" />
+    <form action="computers/view" method="POST">
+      <input type="hidden" value="<%= e.sku %>" name="sku">
+      <input type="submit" value="See who owns this product!">
+    </form>
+    </div>
   </div>
   <div class="prod-right">
     <h1 class="product-name"><%= e.name %></h1>
@@ -24,10 +30,7 @@
         <input type="submit" value="ADD TO WISHLIST" />
       </form>
 
-      <form action="computers/view" method="POST">
-        <input type="hidden" value="<%= e.sku %>" name="sku">
-        <input type="submit" value="See who owns this product!">
-      </form>
+     
     </div>
   </div>
 </div>
