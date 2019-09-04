@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
   user.associate = function(models) {
     // associations can be defined here
     models.user.belongsToMany(models.item, {through: 'usersItems'})
-    models.user.belongsToMany(models.wishitem, {through: 'usersWishitems'})
+    models.user.belongsToMany(models.wishitems, {through: 'usersWishitems'})
   };
 
   // Custom function: validPassword

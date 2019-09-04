@@ -8,14 +8,14 @@ router.post('/', (req, res) => {
     if(req.user) {
         db.user.findByPk(req.user.dataValues.id)
         .then(user => {
-            db.wishitem.findOrCreate({
+            db.wishitems.findOrCreate({
                 where: {
                     productId: req.body.sku,
                     name: req.body.name,
                     price: req.body.price
                 }
             }).spread((wishitem, created) => {
-                user.addWishitem(wishitem).then(() => {
+                user.addWishitems(wishitem).then(() => {
                     res.redirect('/wishList')
                 })
             }).catch(err => {
