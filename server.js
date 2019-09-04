@@ -48,6 +48,8 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404.ejs');
 })
-app.listen(process.env.PORT, () => {
-    console.log('Wheee! Server is now running at ' + process.env.PORT)
-})
+// app.listen(process.env.PORT, () => {
+//     console.log('Wheee! Server is now running at ' + process.env.PORT)
+// })
+
+app.listen(process.env.PORT || 8001)
