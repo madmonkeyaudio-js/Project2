@@ -1,7 +1,18 @@
 
-Jonny's bestbuyApp
+Best Buyz
 
-User stories:
+## Table of Contents
+
+* [Overview](#overview)
+* [User stories](#user-stories)
+* [RESTful routes](#restful-routes)
+* [Bugs](#bugs)
+
+## Overview
+
+Best Buyz is a simple product search app to view popular Best Buy items and save those items to favorites lists. Users may also see what other people are using to better inform their purchasing decisions.
+
+## User stories
 
 User signs up via sign-up form.
 User logs in via login form and is directed to a profile page. 
@@ -11,7 +22,7 @@ User may comment on any of these displayed products, and save them either to a l
 User may view their products, or their wishlist on separate pages. 
 User may view what other users have, but not their wishlist. 
 
-RESTful routes: 
+## RESTful routes
 
 /GET
 /Profile displays current user profile, populated by user database. 
@@ -38,7 +49,7 @@ An update form calls on the current user's row and updates its information with 
 /DELETE
 A delete button calls on the current user's row and deletes it. 
 
-Known bugs/issues:
+## Bugs
 
 --> As of now it is possible to save the same item to My Items list multiple times simply
 by changing the comment input. 
