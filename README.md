@@ -51,14 +51,14 @@ A delete button calls on the current user's row and deletes it.
 
 ## Bugs
 
---> As of now it is possible to save the same item to My Items list multiple times simply
+As of now it is possible to save the same item to My Items list multiple times simply
 by changing the comment input. 
 
---> Deleting a user does not delete his/her associated items from the database. 
+Deleting a user does not delete his/her associated items from the database. 
 
 Future features:
 
---> Users should be able to see either a number or percentage of other users who use a particular product, not just their names. 
+Users should be able to see either a number or percentage of other users who use a particular product, not just their names. 
 
---> When there are no favorited or wished items the rendered pages should read something like, 
+When there are no favorited or wished items the rendered pages should read something like, 
 'Looks like you haven't added anything yet!'
