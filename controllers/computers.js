@@ -6,7 +6,7 @@ const db = require('../models');
 
 router.get('/', (req,res) => {
 
-    var bestBuyUrl = `https://api.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=${process.env.apiKey}&format=json`;
+    var bestBuyUrl = `https://api.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=${process.env.API_KEY}&format=json`;
     // Use request to call the API
     axios.get(bestBuyUrl)
     .then(function(apiResponse) {
