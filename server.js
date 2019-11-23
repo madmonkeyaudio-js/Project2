@@ -52,4 +52,6 @@ app.get('*', (req, res) => {
 //     console.log('Wheee! Server is now running at ' + process.env.PORT)
 // })
 
-app.listen(process.env.PORT || 8001)
+app.listen(process.env.PORT || 8001, () => {
+    console.log('wheee up an runnin')
+})
